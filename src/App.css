@@ -1,4 +1,8 @@
+@import "tailwindcss";
+
 :root {
+  --color-yellow-100: #FFFDED;
+
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -30,7 +34,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   :root {
     --text: #9ca3af;
     --text-h: #f3f4f6;
@@ -55,11 +59,11 @@ body {
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
+  /* width: 1126px; */
+  /* max-width: 100%; */
+  /* margin: 0 auto; */
+  /* text-align: center; */
+  /* border-inline: 1px solid var(--border); */
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -95,17 +99,324 @@ p {
   margin: 0;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+/* ===================== BUILD ORIGINAL ===================== */
+
+/* Start */
+/* Navbar */
+.bg-navbar-first {
+background: linear-gradient(180deg, #a48e00 0%, #c8ad0000 95%);
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+
+
+
+@media screen and (max-width:1300px){
+  .slider-container .child .a2{ bottom: 30px; width: 60px; }
+}
+
+@media screen and (max-width:1200px){
+.slider-container .child .a2 {
+    right: 20px;
+}
+}
+
+@media screen and (max-width:1024px){
+
+.slider-container .child .text .h{font-size: 22px;}
+.slider-container .child .text{bottom: 35px;}
+}
+
+@media screen and (max-width:960px){
+.slider-container .child{height:48vw;}
+.slider-container .child .text{left:0px;right:240px;}
+}
+
+@media screen and (max-width:800px){
+.slider-container .child .a2{ bottom: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px; }
+
+    .slider-container .child .text{bottom: 5px;}
+}
+
+@media screen and (max-width:785px){/*mobile*/
+.home2 .d2 .item .f18{height: 120px;}
+}
+
+@media screen and (max-width:768px){/*ipad*/
+.slider-container .child .text .h{font-size: 16px;line-height: 1.3;padding: 5px 10px;}
+}
+
+@media screen and (max-width:600px){/*phone*/
+.slider-container .child .text .h{text-shadow:0 0 8px rgba(0,0,0,0.2);line-height:1.2;}
+}
+
+/* @charset "utf-8"; */
+
+/* Slider CONTAINER */
+.slider-container{
+  position:relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  /* border-radius: 12px; */
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); */
+}
+
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+
+  padding: 90px 30px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2rem;
+
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position: relative;
+}
+.slide::after {
+  content: "";
+  position:absolute; 
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  width: 100%;
+  background:linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+
+.slider-container .child .text{
+  position:absolute;
+  left:0;
+  right:380px;
+  bottom: 30px;}
+/* text-transform:capitalize; */
+.slider-container .child .text .h{
+  /*line-height:1.2;*/
+  font-weight:bold;
+  font-size: 30px;
+  padding: 0.2em 1em;}
+.slider-container .child .a2{ 
+  position: absolute;
+  right: 15px;
+  bottom: 35px;
+  font-size: 24px;
+  line-height: 1;
+  width: 80px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center; 
+  z-index: 5; }
+.slider-container .child .a2:after {
+  content: "\e76c";
+  display: inline-block;
+  vertical-align: middle;
+  font-family: icon;}
+.slider-container .child:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to top,rgba(0,0,0,0.8),rgba(0,0,0,0));}
+
+/* slider-wrapper */
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+/* NAVBAR CONTAINER */
+
+
+
+
+.f24 {
+    font-size: 24px;
+}
+
+.header .d2 {
+    height: 80px;
+    padding: 0 80px;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.5),rgba(0,0,0,0));
+    color: #fff;
+    transition: all 0.5s;
+    
+}
+
+
+@media screen and (max-width: 1500px) {
+.f24 {
+        font-size: 22px;
+    }
+
+.header .d2 {
+        padding: 0 50px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+.f24 {
+        font-size: 20px;
+    }
+  }
+
+@media screen and (max-width: 1150px) {
+  .f24 {
+        font-size: 18px;
+    }
+
+  .header .d2 {
+        padding: 0 30px;
+        height: 70px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+.header {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  transition: all 0.3s;
+}
+
+
+
+.header .logo img {
+    height: 50px;
+    cursor: pointer;
+}
+
+/* .header .logo .r {
+    display: none;
+} */
+
+.header .nav_main {
+  display: flex;
+}
+
+.header .nav_main .inner {
+  position: relative;
+  height: 100%;
+  /* gap: 2rem; */
+  align-items: center;
+}
+
+.item {
+  margin-inline: 20px;
+}
+
+.header .nav_main .text {
+  margin: 0 35px;
+}
+
+/* .header .nav_main .text::after {
+  content: "";
+  vertical-align: middle;
+  height: 100%;
+  display: inline-block;
+} */
+
+
+.header .nav_main .inner .item a {
+  font-size: 1.2rem;
+  position: relative;
+  display: inline-block;
+}
+
+
+.header .nav_main .inner .item a::after {
+  content: "";
+  position: absolute;
+
+  left: 50%;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+
+  background: white;
+
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+
+.header .nav_main .inner .item:hover a::after {
+  width: 100%;
+}
+
+
+@media screen and (max-width: 960px) {
+    /*mobile*/ .header {
+        display:none;
+    }
+  }
+
+/*  */
+.home4 .dl .item .f24{padding-right: 0;}
+.about7 .item .f24{line-height: 1.3;}
+.home2 .d1 .text .f24{font-size: 20px;}
+@media screen and (max-width:1500px){
+  .home2 .d1 .text .f24{
+    font-size: 18px;}}
+@media screen and (max-width:1300px){
+  .home2 .d1 .text .f24{
+    font-size: 16px;}}
+.home4 .dl .item .f24{padding-right:30%;line-height:1.3;}
+.home4 .dl .item:hover .f24{color:#94070a;}
+
+
+/* Dots */
+
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+  background-color: white;
+  transform: scale(1.3);
 }

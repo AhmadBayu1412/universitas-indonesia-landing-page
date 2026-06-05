@@ -1,9 +1,18 @@
-import './App.css'
-import Navbar from './components/Navbar'
+import Highlight from "./components/Hero/Highlight"
+import Navbar from "./components/Hero/Navbar"
+import Introduction from "./components/Overview/Introduction"
 
 const App = () => {
   return (
-    <Navbar /> 
+    <>
+    <div className="hero">
+      <Navbar /> 
+      <Highlight /> 
+    </div>
+    <div className="overview">
+      <Introduction />
+    </div>
+    </>
   )
 }
 
