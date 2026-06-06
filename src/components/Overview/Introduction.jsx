@@ -13,7 +13,7 @@ const [currentIndex, setCurrentIndex] = useState(0)
     <div className="rounded-3xl bg-yellow-100 flex-column p-15 w-100% h-100vh m-20 shadow-(--shadow-3xl)">
       <div className="container-introduction flex  justify-center gap-15">
         <div className="description flex-column items-center justify-center flex-1 ">
-            <h1>Academic Excellence </h1>
+            <h1 className="text-2xl leading-none mb-5 w-0.5">Academic Excellence </h1>
             <p className="text-2xl">Preparing Future Leaders Through. Education, Research & Innovation</p>
             <div className="btn-headline">
               {button.map((item, index) => (

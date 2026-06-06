@@ -82,7 +82,7 @@ h2 {
 h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
-  margin: 32px 0;
+  /* margin: 32px 0; */
   @media (max-width: 1024px) {
     font-size: 36px;
     margin: 20px 0;
@@ -487,7 +487,7 @@ a {
 
 /* Button Overview */
 .btn-headline {
-  @apply mt-22 flex gap-5;
+  @apply mt-13 flex gap-5;
 }
 .btn-overview.active {
   @apply bg-yellow-400 text-black font-bold py-2 px-4 rounded-lg cursor-pointer shadow-lg;
@@ -495,4 +495,17 @@ a {
 }
 .btn-overview {
   @apply bg-(--bg) py-2 px-4 rounded-lg cursor-pointer shadow-sm;
+}
+
+/* .text-video */
+.text-video {
+  @apply flex-1 p-10 flex-col bg-[url(/assets/images/image-univ.jpg)] relative bg-cover bg-center z-0;
+}
+.text-video::after {
+  content: '';
+  @apply absolute bg-amber-400/85 inset-0 z-1;
+}
+.text-video h1,
+.text-video p {
+  @apply relative z-2;
 }
